@@ -81,3 +81,32 @@ def is_divisible(x,y):
     else:
         return False
 print(is_divisible(20,5))
+
+print("=====SECTION 11=====")
+#The operation goes through but Python defaults to false, because they are different data types
+print(12 == "Twelve")
+
+print("=====SECTION 12=====")
+is_even = lambda n: "even" if n % 2 == 0 else "odd"
+print(is_even(22))
+
+print("=====SECTION 13=====")
+res = 0.1 + 0.2
+def is_decimal(n):
+    if n == 0.3:
+        return True
+    else:
+        return False
+
+print(is_decimal(res))
+
+print("=====SECTION 14=====")
+def make_loud(text):
+    if type(text) == str:
+        text += "!!!"
+    return text
+def shout(text):
+    make_loud(text)
+    print(text)
+print(shout("Ousman"))
+
