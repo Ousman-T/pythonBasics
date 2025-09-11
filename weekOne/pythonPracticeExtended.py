@@ -106,7 +106,77 @@ def make_loud(text):
         text += "!!!"
     return text
 def shout(text):
-    make_loud(text)
-    print(text)
+    modified_text = make_loud(text)
+    print(modified_text)
 print(shout("Ousman"))
+
+print("=====SECTION 15=====")
+#Given x = 10, y = 5, z = 0, write a conditional that prints "Only x is positive" if only x is greater than 0.
+x = 10
+y = 5
+z = 0
+if x > 0 and y <= 0 and z <= 0:
+    print("Only x is positive")
+
+print("=====SECTION 16=====")
+def print_something(something):
+    print(something)
+    return None
+print(type(print_something("Hello")))
+
+print("=====SECTION 17=====")
+byytes = b'hello'
+string_data = byytes.decode("UTF-8")
+print(type(byytes))
+print(string_data)
+print(type(string_data))
+
+print("=====SECTION 18=====")
+password = "OpenSesame"
+user_input = input("Enter a password: ")
+if password == user_input:
+    print("Access Granted")
+else:
+    print("Access Denied")
+
+print("=====SECTION 19=====")
+has_permission = True
+status = "Allowed" if has_permission else "Denied"
+print(status)
+
+print("=====SECTION 20=====")
+def make_adder(n):
+    return lambda x: x + n
+add5 = make_adder(5)
+print(add5(3))
+
+print("=====SECTION 21====")
+def grade(score):
+    match score:
+        case _ if score >= 90:
+            return "A"
+        case _ if score >= 80:
+            return "B"
+        case _ if score >= 70:
+            return "C"
+        case _ if score >= 60:
+            return "D"
+        case _ :
+            return "F"
+print(grade(82))
+
+print("=====SECTION 22====")
+def calculate(operator, num_one, num_two):
+    match operator:
+        case _ if operator == "+":
+            return num_one + num_two
+        case _ if operator == "-":
+            return num_one - num_two
+        case _ if operator == "*":
+            return num_one * num_two
+        case _ if operator == "/":
+            return num_one / num_two
+
+print(calculate(operator="+", num_one=3, num_two=5))
+print(calculate(operator="-", num_one=3, num_two=5))
 
